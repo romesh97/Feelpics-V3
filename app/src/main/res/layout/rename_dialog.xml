@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Rename Album"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="20dp"
+             android:textColor="@color/darkTextColor" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/lightTextColor"
+            app:boxBackgroundColor="#00ffffff"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            app:endIconTint="@color/primaryColor">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/albumRenameEt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="text"
+                android:hint="New album name"
+                android:paddingVertical="0dp"
+                android:fontFamily="@font/poppins_light"
+                android:textColor="@color/darkTextColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/renameAlbumBtn"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Rename"
+            android:paddingHorizontal="20dp"
+            android:textAllCaps="false"
+            android:layout_marginBottom="15dp"
+            android:textSize="18dp"
+            app:cornerRadius="40dp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

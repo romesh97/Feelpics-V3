@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SettingsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:text="Settings"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="35dp"
+                android:textColor="@color/darkTextColor"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:textAlignment="center"
+                android:text="App version 1.0"
+                android:fontFamily="@font/poppins_light"
+                android:textSize="25dp"
+                android:textColor="@color/lightTextColor"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="45dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Enable dark mode"
+                    android:textColor="@color/darkTextColor"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="18dp"
+                    android:layout_weight="1"
+                    />
+                <Switch
+                    android:id="@+id/darkThemeSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:trackTint="@color/darkTextColor"
+                    android:theme="@style/switchTheme"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/privatePolicesTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Private polices"
+                android:layout_marginTop="30dp"
+                android:textSize="18dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/darkTextColor"
+                />
+            <LinearLayout
+                android:id="@+id/maxQtyLl"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Album max Qty"
+                    android:layout_marginTop="30dp"
+                    android:textSize="18dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/darkTextColor"
+                    />
+                <TextView
+                    android:id="@+id/maxQtyTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_marginTop="30dp"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/darkTextColor"
+                    />
+            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/signInBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primaryColor"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/syncDataTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="10dp"
+                        android:text="Sign In"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:src="@drawable/ic_google"
+                        android:textAllCaps="false"
+                        android:textSize="18dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/syncDataTv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/syncDataTv"
+                        app:layout_constraintTop_toTopOf="@+id/syncDataTv" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/backupBtn"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Backup"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                app:cornerRadius="40dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signOutBtn"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Sign out"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                app:cornerRadius="40dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

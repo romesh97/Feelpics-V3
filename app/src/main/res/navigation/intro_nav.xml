@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/intro_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="io.millionic.feelpics.ui.onboarding.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+
+        <action
+            android:id="@+id/action_splashFragment_to_introViewPagerFragment"
+            app:destination="@id/introViewPagerFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_splashFragment_to_homeActivity"
+            app:destination="@id/homeActivity"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/introViewPagerFragment"
+        android:name="io.millionic.feelpics.ui.onboarding.IntroViewPagerFragment"
+        android:label="IntroViewPagerFragment" >
+        <action
+            android:id="@+id/action_introViewPagerFragment_to_homeActivity"
+            app:destination="@id/homeActivity"
+            app:popUpTo="@id/introViewPagerFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="io.millionic.feelpics.ui.HomeActivity"
+        android:label="home_activity"
+        tools:layout="@layout/home_activity" />
+</navigation>
